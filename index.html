@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family cost tracker</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body class="costTracking">
+
+    <nav class="nav">
+        <p class="welcome">Log in to get started</p>
+        <span class="logo">💸💰💸</span>
+        <form class='form__login'>
+            <input class="form__input form__input--login login--user" type="text" placeholder="user">
+            <input class="form__input form__input--login login--pin" type="password" placeholder="PIN">
+            <button class="btn__login">➡</button>
+        </form>
+        <button class="btn btn__logout hidden">Logout</button>
+    </nav>
+
+    <main class="main hidden">
+        <div class="balance">
+            <div>
+                <p class="balance__label">Current balance</p>
+                <p class="balance__date">As of <span class="date">08/08/2021</span></p>
+            </div>
+            <p class="balance__value">3450€</p>
+        </div>
+
+        <div class="movements">
+            <div class="movements__row">
+                <div class="movements__type movements__type--deposit">1 deposit</div>
+                <div class="movements__message">sold car punto 2010</div>
+                <div class="movements__value">450€</div>
+            </div>
+            <div class="movements__row">
+                <div class="movements__type movements__type--expense">2 expense</div>
+                <div class="movements__message">sold car punto 2010, duzi text</div>
+                <div class="movements__value">-450€</div>
+            </div>
+            <div class="movements__row">
+                <div class="movements__type movements__type--expense">3 expense</div>
+                <div class="movements__message">sold car punto 2010, stoe</div>
+                <div class="movements__value">-1450€</div>
+            </div>
+        </div>
+
+        <div class="operation operation--transfer">
+            <h2 class="operation__heading">Transfer money</h2>
+            <form class="form form--transfer">
+                <input type="text" class="form__input form__input--to">
+                <input type="number" class="form__input form__input--amount">
+                <button class="form__btn form__btn--transfer">➡</button>
+                <label class="form__label">Transfer to</label>
+                <label class="form__label">Amount</label>
+            </form>
+        </div>
+
+        <div class="operation operation--income">
+            <h2 class="operation__heading">Income</h2>
+            <form class="form form--income">
+                <input type="number" class="form__input form__input--income">
+                <input type="text" class="form__input form__input--incomeMsg" maxlength="25">
+                <button class="form__btn form__btn--income">➡</button>
+                <label class="form__label">Amount</label>
+                <label class="form__label">Message</label>
+            </form>
+        </div>
+
+        <div class="operation operation--expense">
+            <h2 class="operation__heading">Expense</h2>
+            <form class="form form--expense">
+                <input type="number" class="form__input form__input--expense">
+                <input type="text" class="form__input form__input--expenseMsg" maxlength="25">
+                <button class="form__btn form__btn--expense">➡</button>
+                <label class="form__label">Amount</label>
+                <label class="form__label">Message</label>
+            </form>
+        </div>
+
+        <div class="summary">
+            <p class="summary__label">in</p>
+            <p class="summary__value summary__value--in">5000€</p>
+            <p class="summary__label">out</p>
+            <p class="summary__value summary__value--out">5000€</p>
+            <button class="btn__sort">⬇ sort ⬇</button>
+        </div>
+    </main>
+
+    <div class="welcomeAnimation">
+        <span class="welcome__dollar">💲</span>
+        <svg class="curvedText" viewBox="0 0 600 600">
+            <path id="curve" d="M 100 100 Q 200 300 400 300 Q 600 300 700 100  " />
+            <text width="600">
+              <textPath xlink:href="#curve">
+                Welcome to the family cost tracker!
+              </textPath>
+            </text>
+          </svg>
+    </div>
+
+    <div class="loginOptions">
+        <span class="loginOptions__heading">You can log into these 4 users</span>
+        <div class="loginUser">
+            <span class="loginUser__name">Marko Markovic</span>
+            <span class="loginUser__user">user: mm</span>
+            <span class="loginUser__pin">pin: 1111</span>
+        </div>
+        <div class="loginUser">
+            <span class="loginUser__name">Nikola Nikolic</span>
+            <span class="loginUser__user">user: nn</span>
+            <span class="loginUser__pin">pin: 2222</span>
+        </div>
+        <div class="loginUser">
+            <span class="loginUser__name">Milena B.Matejic</span>
+            <span class="loginUser__user">user: mbm</span>
+            <span class="loginUser__pin">pin: 3333</span>
+        </div>
+        <div class="loginUser">
+            <span class="loginUser__name">Sara Saric</span>
+            <span class="loginUser__user">user: ss</span>
+            <span class="loginUser__pin">pin: 4444</span>
+        </div>
+    </div>
+</body>
+</html>
